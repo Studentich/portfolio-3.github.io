@@ -1,0 +1,445 @@
+/*Reset*/
+* {
+   font-family: 'Poppins', sans-serif;
+   color: black;
+   font-size: 20px;
+   font-weight: 400;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: none;
+   text-decoration: none;
+   list-style: none;
+}
+
+.container{
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+/**/
+
+/*Header*/
+.header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+   padding-top: 22px;
+   z-index: 1;
+}
+
+
+
+/*header nav*/
+.header ul li {
+   display: inline-block;
+   list-style: none;
+   text-transform: uppercase;
+}
+
+.header ul li a{
+   font-weight: 600;
+   font-size: 15px;
+   color: white;
+}
+
+.header ul li a:not(.nav__link_active):hover{
+   border-bottom: 1px solid white;
+}
+
+.header ul li:not(:last-child){
+   margin-right: 35px;
+}
+
+.nav__link_active{
+   border-bottom: 2px solid white;
+}
+
+/*header language*/
+.header__lng{
+   text-transform: uppercase;
+}
+
+.header__lng span{
+   color: white;
+}
+
+.header__lng span:not(:last-child){
+   margin-right: 8px;
+}
+
+.header__lng_active{
+   color: #b7b7b7 !important;
+}
+/**/
+
+
+
+
+
+
+
+
+/*Main*/
+
+/*block intro*/
+.intro{
+   background-image: url("img/intro_back.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 200px 0 400px 0;
+   position: relative;
+}
+
+.intro h1{
+   color: white;
+   font-weight: 700;
+   font-size: 48px;
+   max-width: 70%;
+   margin-bottom: 53px;
+}
+
+.intro button{
+   background-color: #db2512;
+   padding: 11px 48px;
+   font-weight: 500;
+   font-size: 18px;
+   color: white;
+}
+
+.intro button:hover{
+   background-color: #83180c;
+   transition: background-color 0.3s;
+}
+/**/
+
+
+/*Intro blocks*/
+.intro__blocks{
+   display: flex;
+   position: absolute;
+   gap: 21px;
+   bottom: -10%;
+   width: 100%;
+   justify-content: center;
+   padding-left: 20px;
+   padding-right: 20px;
+   
+}
+
+.intro__block{
+   background-color: white;
+   box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
+   padding: 39px 48px 37px 39px;
+   flex: 0 1 386px;
+   position: relative;
+}
+
+.intro__block::before{
+   content: "";
+   background-image: url("icon/Vector.svg");
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   top: 10%;
+   left: 10%;
+   background-repeat: no-repeat;
+}
+
+.intro__block_calendar::before{
+   content: "";
+   background-image: url("icon/Vector-2.svg");
+}
+
+.intro__block_location::before{
+   content: "";
+   background-image: url("icon/Vector-3.svg") ;
+}
+
+.intro__block p{
+   font-weight: 700;
+   font-size: 18px;
+   margin-top: 21px;
+   margin-bottom: 15px;
+}
+
+.intro__block span{
+   font-weight: 400;
+   font-size: 18px;
+   color: #b7b7b7;
+}
+/**/
+
+
+
+
+/*Services block*/
+.services{
+   padding-top: 197px;
+   padding-bottom: 98px;
+}
+
+.service__title{
+   margin-bottom: 60px;
+}
+
+.service__title p{
+   text-transform: uppercase;
+   color: #000000;
+   font-size: 30px;
+   font-weight: 700;
+   margin-bottom: 15px;
+}
+
+.service__title a{
+   font-weight: 400;
+   font-size: 15px;
+   border-bottom: 1px solid #000000;
+   margin-bottom: 60px;
+}
+
+/*Service block*/
+.services__blocks{
+   display: flex;
+   flex: 0 1 386px;
+   gap: 21px;
+}
+
+.service__block{
+   position: relative;
+}
+
+.service__block img{
+   margin-bottom: 21px;
+   width: 100%;
+}
+
+.service__block p{
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.overlay{
+   background: rgba(0,0,0,0.7);
+   position: absolute;
+   width: 100%;
+   height: 89.5%;
+   top: 0;
+   left: 0;
+   display: none;
+}
+
+.service__block:hover .overlay{
+   display: block;
+}
+
+.service__block:hover::before{
+   content: url("img/plus.png");
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+}
+
+.service__block:hover::after{
+   content: "ANNUAL CHECKUPS FROM YOUR PHYSICIAN KEEP YOU IN GOOD HEALTH";
+   width: 70%;
+   height: auto;
+   position: absolute;
+   top: 65%;
+   left: 10%;
+   color: white;
+   z-index: 1;
+}
+
+
+
+/*ABout*/
+.about{
+   background-color: #171616;
+}
+
+.about__block{
+   display: flex;
+   justify-content: space-between;
+   padding: 117px 20px;
+   align-items: center;
+   gap: 120px;
+}
+
+.about__title{
+   width: 50%;
+}
+
+.about__title h2{
+   font-weight: 700;
+   font-size: 30px;
+   color: white;
+   margin-bottom: 42px;
+}
+
+.about__title p{
+   font-weight: 600;
+   font-size: 15px;
+   color: #B7B7B7;
+   margin-bottom: 42px;
+}
+
+.about__title a{
+   color: #FFFFFF;
+   font-size: 18px;
+   font-weight: 500;
+   border-bottom: 1px solid #f7f7f7;
+}
+
+.about__image{
+   width: 50%;
+}
+
+.about__image img{
+   width: 100%;
+}
+/**/
+
+/*Work process*/
+
+.work-process{
+   padding: 99px 20px;
+}
+
+.work-process__title{
+   text-align: center;
+}
+
+.work-process__title h2{
+   font-weight: 900;
+   font-size: 148px;
+   color: black;
+   margin-bottom: 58px;
+}
+
+.work-process__title p{
+   font-weight: 600;
+   font-size: 40px;
+   margin-bottom: 92px;
+}
+
+.work-process__row{
+   display: flex;
+   justify-content: center;
+   gap: 21px;
+}
+
+.row__block{
+   background-color: white;
+   box-shadow: 0px 0px 15px rgba(0,0,0,0.25);
+   padding: 39px 48px 37px 39px;
+   flex: 0 1 386px;
+}
+
+.row__block p{
+   color: black;
+   font-size: 18px;
+   font-weight: 700;
+   margin-bottom: 15px;
+}
+
+.row__block span{
+   color: #B7B7B7;
+   font-weight: 400;
+   font-size: 18px;
+}
+/**/
+
+/*Contact*/
+.contact{
+   background-color: #171616;
+   padding-top: 97px;
+   padding-bottom: 97px;
+}
+
+.contact h2{
+   color: white;
+   font-weight: 700;
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom:46px;
+}
+
+/*Form*/
+.contact__form{
+   width: 50%;
+}
+
+/*Input*/
+.input__items{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 20px;
+}
+
+.input__item{
+   flex: 0 1 50%;
+   margin-bottom: 40px;
+}
+
+.input__item input{
+   color: white;
+   font-weight: 400;
+   font-size: 15px;
+   border-bottom: 2px solid white;
+   background: none;
+   width: 80%;
+   padding-bottom: 10px;
+}
+
+/*Input message*/
+.input__message{
+   width: 90%;
+   margin-bottom: 37px;
+}
+
+.input__message textarea{
+   width: 100%;
+   background: none;
+   color: white;
+   border-bottom: 2px solid white;
+   padding-bottom: 100px;
+}
+
+/*button*/
+.btn{
+   padding: 11px 75px;
+   color: white;
+   background-color: #DB2512;
+
+}
+/**/
+
+/*footer*/
+.footer{
+   display: flex;
+   justify-content: space-between;
+   padding: 60px 20px;
+}
+
+.footer__info p{
+   font-weight: 400;
+   font-size: 15px;
+   color: black;
+}
+
+.footer__icons ul{
+   display: flex;
+   gap: 21px;
+}
+/**/
